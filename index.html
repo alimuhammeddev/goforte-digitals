@@ -27,31 +27,28 @@
         <nav class="flex justify-between items-center w-[92%] mx-auto py-6">
             <div class="flex items-center lg:ml-44 md:ml-0 ml-10">
                 <img src="/images/WhatsApp Image 2024-01-20 at 4.32.03 PM.jpeg" class="lg:w-24 w-16" alt="">
-                <span class="hidden lg:inline-block mx-4"> <!-- Add margin between logo and links -->
-                  <!-- Optional: Add a text or spacer to separate logo and links -->
-              </span>
             </div>
-            <div class="nav-links md:static fixed md:min-h-fit min-h-[90vh] left-0 top-20 -translate-x-full md:translate-x-0 md:w-auto w-full flex items-center px-5 transform transition-transform duration-300 ease-in-out bg-[#f8f8f8] lg:bg-transparent md:bg-transparent">
+            <div x-data="{ isOpen: false }" class="nav-links md:static fixed md:min-h-fit min-h-[90vh] left-0 top-20 -translate-x-full md:translate-x-0 md:w-auto w-full flex items-center px-5 transform transition-transform duration-300 ease-in-out bg-[#f8f8f8] lg:bg-transparent md:bg-transparent">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 lg:mt-0 md:mt-0 -mt-28">
                     <li>
-                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section1">Home</a>
+                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section1" onclick="closeMobileMenu()">Home</a>
                     </li>
                     <li>
-                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section2">About us</a>
+                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section2" onclick="closeMobileMenu()">About us</a>
                     </li>
                     <li>
-                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section3">Services</a>
+                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section3" onclick="closeMobileMenu()">Services</a>
                     </li>
                     <li>
-                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section4">Projects</a>
+                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 text-base" href="#section4" onclick="closeMobileMenu()">Projects</a>
                     </li>
                     <li>
-                        <a data-scroll class="text-[#ffffff] bg-[#F8931C] p-2 rounded-md text-base w-fit" href="#section5">contact us</a>
+                        <a data-scroll class="text-[#ffffff] bg-[#F8931C] p-2 rounded-md text-base w-fit" href="#section5" onclick="closeMobileMenu()">contact us</a>
                     </li>
                 </ul>
             </div>
             <div class="gap-6">
-                <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                <ion-icon onclick="toggleMobileMenu()" name="menu-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
         </nav>
     </header>
@@ -152,7 +149,7 @@
                     <div class="flex mx-auto justify-center border w-full rounded-xl">
                         <img src="/images/Federalcollegeofedukontagora.jpg" width="100%" class="rounded-xl" alt="">
                     </div>
-                    <h1 class="text-center mt-5 lg:text-16px text-base font-medium text-[#F8931C]">Federal college of education kotongora</h1>
+                    <h1 class="text-center mt-5 lg:text-16px text-base font-medium text-[#F8931C]">FCE, kotongora</h1>
                 </div>
                 <div class="p-4">
                     <div class="flex mx-auto justify-center border w-fit rounded-xl">
@@ -653,12 +650,6 @@ class="hidden fixed z-90 bottom-8 right-8 border-0 lg:w-16 w-10 lg:h-16 h-10 rou
 
 <!-------------------Javascript code-------------->
     <script>
-        const navlinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-             e.name = e.name === 'close' ? 'menu' : 'close' 
-             navlinks.classList.toggle('-translate-x-full')
-        }
-
         var toTopButton = document.getElementById("to-top-button");
 
         // When the user scrolls down 200px from the top of the document, show the button
@@ -680,6 +671,17 @@ class="hidden fixed z-90 bottom-8 right-8 border-0 lg:w-16 w-10 lg:h-16 h-10 rou
             speed: 800, // Adjust the scroll speed as needed
         });
     });
+
+    // Function to close the mobile menu
+    function closeMobileMenu() {
+        document.querySelector('.nav-links').classList.add('-translate-x-full');
+    }
+
+    // Function to toggle the mobile menu visibility
+    function toggleMobileMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('-translate-x-full', !navLinks.classList.contains('-translate-x-full'));
+    }
     </script>
 <!--------------End of javascript code--------->
 </body>
