@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Add this to your head section -->
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
@@ -20,7 +21,7 @@
         font-family: 'Open Sans', sans-serif;
     }
 </style>
-<body>
+<body id="section1" class="scroll-spy-section">
 
 <!----------------Nav Bar------------>
     <header class="bg-[#ffffff] z-20 fixed top-0 left-0 w-full shadow-md">
@@ -37,13 +38,13 @@
                         <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 lg:text-xl text-lg md:text-base" href="#section2">About us</a>
                     </li>
                     <li>
-                        <a class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 lg:text-xl text-lg md:text-base" href="section3#">Services</a>
+                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 lg:text-xl text-lg md:text-base" href="#section3">Services</a>
                     </li>
                     <li>
-                        <a class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 lg:text-xl text-lg md:text-base" href="#section4">Projects</a>
+                        <a data-scroll class="text-[#121212CC] hover:text-[#F8931C] transition ease-out duration-500 lg:text-xl text-lg md:text-base" href="#section4">Projects</a>
                     </li>
                     <li>
-                        <a class="text-[#ffffff] bg-[#F8931C] p-2 rounded-md text-lg w-fit md:text-sm lg:text-xl" href="#section5">contact us</a>
+                        <a data-scroll class="text-[#ffffff] bg-[#F8931C] p-2 rounded-md text-lg w-fit md:text-sm lg:text-xl" href="#section5">contact us</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +58,7 @@
 
 <!------------Hero Section---------->
     <div>
-        <div class="container mx-auto p-4 lg:mt-60 mt-40">
+        <div class="container mx-auto p-4 lg:mt-60 mt-32">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 <div class="p-5">
                     <h1 class="bg-[#ffd78a] text-[#f8931c] font-bold w-fit p-3 lg:text-xl text-sm rounded-xl">Hello, Welcome to GOFORTE DIGITALS</h1>
@@ -79,7 +80,9 @@
 <!----------About us Section----------->
     <div id="section2" class="scroll-spy-section">
         <div class="container mx-auto p-4">
-            <div class="text-center font-bold lg:text-4xl text-xl">About Us</div>
+            <div class="mt-24">
+              <h1 class="text-center font-bold lg:text-4xl text-xl">About Us</h1>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center">
                 <div class="p-5 order-last md:order-first">
                     <img src="/images/undraw_team_work_k-80-m.svg" alt="">
@@ -96,9 +99,9 @@
 
 
 <!--------------Our Services Section------------>
-    <div>
+    <div id="section3" class="scroll-spy-section">
         <div class="container mx-auto p-4 mt-20">
-            <div>
+            <div class="mt-24">
                 <h1 class="text-center font-bold lg:text-4xl text-xl">Our Services</h1>
                 <p class="text-center text-[#6D6C76] lg:text-2xl text-base mt-2">A brief overview of the services <span class="text-[#F8931C]">GOfortedigitals</span> Provides</p>
             </div>
@@ -131,7 +134,7 @@
 
 
 <!----------find out more section--------->
-    <div>
+    <div class="scoll-spy-section" id="section3">
         <div class="container mx-auto p-4 mt-24">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center">
                 <div class="p-5 order-last md:order-first">
@@ -155,7 +158,7 @@
 
 
 <!-----------Project Section----------->
-    <div class="bg-[#F9F9F9] p-5">
+    <div class="bg-[#F9F9F9] p-5 scroll-spy-section" id="section4">
         <div class="container mx-auto p-4 mt-20">
             <div>
                 <h1 class="text-center font-bold lg:text-4xl text-2xl">Our Portfolio</h1>
@@ -166,25 +169,25 @@
                     <div class="flex mx-auto justify-center border w-fit rounded-xl">
                         <img src="/images/ecstasynigeria copy.png" width="60%" class="h-60 rounded-xl" alt="">
                     </div>
-                    <h1 class="text-center mt-5 lg:text-2xl text-lg font-medium text-[#F8931C]">Ecstasynigeria</h1>
+                    <h1 class="text-center mt-5 lg:text-2xl text-base font-medium text-[#F8931C]">Ecstasynigeria</h1>
                 </div>
                 <div class="p-4">
                     <div class="flex mx-auto justify-center border w-fit rounded-xl">
                         <img src="/images/Federalcollegeofedukontagora copy.png" width="60%" class="h-60 rounded-xl" alt="">
                     </div>
-                    <h1 class="text-center mt-5 lg:text-2xl text-lg font-medium text-[#F8931C]">Federal college of education kotongora</h1>
+                    <h1 class="text-center mt-5 lg:text-2xl text-base font-medium text-[#F8931C]">Federal college of education kotongora</h1>
                 </div>
                 <div class="p-4">
                     <div class="flex mx-auto justify-center border w-fit rounded-xl">
                         <img src="/images/kobowallet.co copy.png" width="60%" class="h-60 rounded-xl" alt="">
                     </div>
-                    <h1 class="text-center mt-5 lg:text-2xl text-lg font-medium text-[#F8931C]">kobowallet</h1>
+                    <h1 class="text-center mt-5 lg:text-2xl text-base font-medium text-[#F8931C]">kobowallet</h1>
                 </div>
                 <div class="p-4">
                     <div class="flex mx-auto justify-center border w-fit rounded-xl">
                         <img src="/images/nigeriacampusprint copy.png" width="60%" class="h-60 rounded-xl" alt="">
                     </div>
-                    <h1 class="text-center mt-5 lg:text-2xl text-lg font-medium text-[#F8931C]">Space printz</h1>
+                    <h1 class="text-center mt-5 lg:text-2xl text-base font-medium text-[#F8931C]">Space printz</h1>
                 </div>
             </div>
         </div>
@@ -642,17 +645,17 @@ keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
         </h1>
         <h2 class="text-center mt-3 lg:text-2xl text-lg">Follow Us</h2>
         <div class="space-x-5 items-center mx-auto justify-center flex mt-8">
-            <i class="fa-brands fa-xl fa-facebook-f" style="color: #F8931C;"></i>
-            <i class="fa-brands fa-xl fa-whatsapp" style="color: #F8931C;"></i>
-            <i class="fa-brands fa-xl fa-x-twitter" style="color: #F8931C;"></i>
-            <i class="fa-brands fa-xl fa-instagram" style="color: #F8931C;"></i>
-            <i class="fa-brands fa-xl fa-linkedin-in" style="color: #F8931C;"></i>
+            <i class="fa-brands fa-lg fa-facebook-f" style="color: #F8931C;"></i>
+            <i class="fa-brands fa-lg fa-whatsapp" style="color: #F8931C;"></i>
+            <i class="fa-brands fa-lg fa-x-twitter" style="color: #F8931C;"></i>
+            <i class="fa-brands fa-lg fa-instagram" style="color: #F8931C;"></i>
+            <i class="fa-brands fa-lg fa-linkedin-in" style="color: #F8931C;"></i>
         </div>
     </div>
     <div class="mt-5">
         <h1 style="border: 1px solid #6D6C76;"></h1>
     </div>
-    <h1 class="text-[#6D6C76] text-center mt-3 mb-5 lg:text-xl text-base">Copyright © 2024 Gofortedigitals</h1>
+    <h1 class="text-[#6D6C76] text-center mt-3 mb-5 lg:text-xl text-sm">Copyright © 2024 Gofortedigitals</h1>
 </div>
 <div>
 <!------------------End of footer section--------------->
